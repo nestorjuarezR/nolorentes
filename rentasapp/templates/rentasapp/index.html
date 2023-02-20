@@ -1,18 +1,57 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    {% block css %}
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="{% static '/rentasapp/css/style.css' %}">
+
+    {% endblock css %}
     <title>Home</title>
-
-
 </head>
+
 <body>
-    <p>Este es el index desde una vista</p>
+    <!-- Barra de navegacion -->
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">No lo Rentes</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Inicio</a></li>
+                <li><a href="badges.html">Publicaciones</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+        <!-- </nav> -->
+
+
+
+        {% block javascript %}
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{% static '/rentasapp/js/init.js' %}"></script>
+        <script src=" {% static '/rentasapp/js/materialize.js' %} "></script>
+        {% endblock javascript %}
+
+
 </body>
+
 </html>
