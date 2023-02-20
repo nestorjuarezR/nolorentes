@@ -32,10 +32,10 @@
     </ul>
     <nav class="navbar">
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">No lo Rentes</a>
+            <a href="/" class="brand-logo">No lo Rentes</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">Inicio</a></li>
-                <li><a href="badges.html">Publicaciones</a></li>
+                <li><a href="/login/">Login</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
                             class="material-icons right">arrow_drop_down</i></a></li>
@@ -43,6 +43,11 @@
         </div>
         <!-- </nav> -->
 
+        
+        {% block contenido %}
+            <p>Este es el index</p>
+        {% endblock contenido %}
+            
 
 
         {% block javascript %}

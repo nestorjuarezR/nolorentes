@@ -1,0 +1,45 @@
+{% extends 'rentasapp/index.html' %}
+
+
+{% block contenido %}
+<div class="container ">
+    <div class="row">
+        <div class="col  m10 l6 offset-l3 offset-m1">
+            <div class="l6 center-align">
+                <h4>Inicio de sesion</h4>
+            </div>
+
+            <div class="card-panel ">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <!-- Usuario -->
+                    <div class=" input-field l4">
+                        <i class="material-icons prefix" id="icono">account_circle</i>
+                        <input type="text" placeholder="Ingrese su Usuario" id="username" class="validate"
+                            name="username" required>
+                        <label for="username">Usuario</label>
+                    </div>
+                    <!-- Contraseña -->
+                    <div class=" input-field ">
+                        <i class="material-icons prefix " id="icono">account_circle</i>
+                        <input type="password" placeholder="Ingrese su Usuario" id="password" class="validate"
+                            name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <!-- Boton enviar -->
+                    <div class="center-align">
+                        <button class="btn center-align btn-large" type="submit"><i
+                                class="material-icons right">send</i>Enviar</button>
+                    </div>
+                    <!-- Link a registro -->
+                    <div class="section">
+                        <div class="center-align">
+                            <a href="/registro/" class="black-text">¿No estas registrado aun?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}
